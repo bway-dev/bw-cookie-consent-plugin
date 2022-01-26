@@ -98,7 +98,7 @@ class Bw_Cookie_Consent_Public
 		 * class.
 		 */
 
-		wp_enqueue_script('bw-cookie-consent-js', plugin_dir_url(__FILE__) . 'js/bw-cookie-consent-public.js', array(), $this->version, false);
+		wp_enqueue_script('bw-cookie-consent-js', plugin_dir_url(__FILE__) . 'js/bw-cookie-consent-public.js', array(), $this->version, true);
 
 		wp_localize_script('bw-cookie-consent-js', 'main_public_params', array(
 			'ajax_url' => admin_url('admin-ajax.php'),
