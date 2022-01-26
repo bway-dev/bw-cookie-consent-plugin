@@ -1,0 +1,95 @@
+:root {
+  --consent-width: 100%;
+  --consent-max-width: auto;
+  --consent-bg-color: #464646;
+  --consent-text-color: #dddddd;
+  --consent-border-color: #dddddd;
+  --consent-border-width: 0;
+  --consent-border-radius: 0;
+  --consent-button-bg-color: #dddddd;
+  --consent-button-color: 464646;
+  --consent-button-border-color: #dddddd;
+  --consent-button-border-radius: 0;
+  --consent-button2-bg-color: transparent;
+  --consent-button2-color: #dddddd;
+  --consent-button2-border-color: #dddddd;
+}
+
+.bw-cookie-consent {
+  /* display: none; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--consent-bg-color);
+  padding: 15px 15px 10px;
+  color: #333;
+  width: var(--consent-width);
+  max-width: var(--consent-max-width);
+  border: var(--consent-border-width) solid var(--consent-border-color);
+  z-index: 1000;
+  border-radius: var(--consent-border-radius);
+}
+
+.bw-cookie-consent .wrapper {
+  display: flex;
+  flex: 1 1 100%;
+  /* flex-direction: column; */
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bw-cookie-consent .actions {
+  gap: 10px;
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.bw-cookie-consent h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--consent-text-color);
+  margin-top: 0;
+}
+
+.bw-cookie-consent p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  display: block;
+  margin: 0 0 0 0;
+  color: var(--consent-text-color);
+}
+
+.bw-cookie-consent p a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 0 0 0 0;
+  opacity: 1;
+  text-decoration: none;
+  color: var(--consent-text-color);
+  transition: opacity 0.5s ease;
+}
+
+.bw-cookie-consent p a:hover {
+  opacity: 0.5;
+}
+
+.bw-cookie-consent a.consent {
+  background-color: var(--consent-button-bg-color);
+  display: inline-block;
+  padding: 4px 8px;
+  color: var(--consent-button-color);
+  border-radius: var(--consent-button-border-radius);
+  border: 1px solid var(--consent-button-border-color);
+}
+
+.bw-cookie-consent a.consent.without-analytics {
+  display: none;
+  background-color: var(--consent-button2-bg-color);
+  padding: 4px 8px;
+  color: var(--consent-button2-color);
+  border: 1px solid var(--consent-button2-border-color);
+}
