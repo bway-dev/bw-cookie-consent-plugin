@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   if (!consentCookiesStatus) {
     document.body.appendChild(mainDiv);
+  } else if (consentCookiesStatus === "allowed") {
+    useAnalytics();
   }
 
   const consentBox = document.querySelector(".bw-cookie-consent"),
