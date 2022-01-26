@@ -43,17 +43,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
       ".bw-cookie-consent .consent.without-analytics"
     );
 
-  consentBox.addEventListener("click", function (e) {
-    e.preventDefault();
-    console.log(e.target.classList);
-    if (e.target.classList.contains("more-options")) {
-      showActions();
-    } else if (e.target.classList.contains("accept")) {
-      allowCookies();
-    } else if (e.target.classList.contains("without-analytics")) {
-      allowCookiesWithoutAnalytics();
-    }
-  });
+  if (consentBox) {
+    consentBox.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (e.target.classList.contains("more-options")) {
+        showActions();
+      } else if (e.target.classList.contains("accept")) {
+        allowCookies();
+      } else if (e.target.classList.contains("without-analytics")) {
+        allowCookiesWithoutAnalytics();
+      }
+    });
+  }
 
   // moreOptions.addEventListener("click", showActions);
   // consentAction.addEventListener("click", allowCookies);
