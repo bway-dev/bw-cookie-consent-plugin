@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       ".bw-cookie-consent .consent.without-analytics"
     );
 
-  document.body.addEventListener("click", function (e) {
+  consentBox.addEventListener("click", function (e) {
     e.preventDefault();
     console.log(e.target.classList);
     if (e.target.classList.contains("more-options")) {
