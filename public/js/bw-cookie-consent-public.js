@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   const consentCookiesStatus = localStorage.getItem("bw-cookie-consent");
 
-  if (!consentCookiesStatus) {
+  if (!consentCookiesStatus || consentCookiesStatus !== "allowed") {
     document.body.appendChild(mainDiv);
-  } else if (consentCookiesStatus === "allowed") {
+  } else if (consentCookiesStatus && consentCookiesStatus == "allowed") {
     useAnalytics();
   }
 
